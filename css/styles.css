@@ -873,6 +873,13 @@ footer {
         transform: translateY(0);
     }
 
+    .booking-container {
+        padding: 0.5rem !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
     .mobile-toggle {
         display: block;
     }
