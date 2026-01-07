@@ -954,6 +954,14 @@ footer {
     position: relative;
 }
 
+/* Contact Links Feint Underline */
+.contact-link {
+    border-bottom: 1px solid rgba(196, 167, 125, 0.4);
+    padding-bottom: 2px;
+    display: inline-block;
+    /* Ensure border works on spans */
+}
+
 .marquee-content {
     display: inline-flex;
     animation: marquee 30s linear infinite;
