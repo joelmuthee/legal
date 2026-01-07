@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Practice Areas - Mtetezi LLP. From Commercial Law to Family Law.">
+    <title>Practice Areas | Mtetezi LLP</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .practice-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .practice-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .practice-content {
+            padding: 2rem;
+        }
+
+        .practice-icon {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/mtetezi_logo_premium_1767782139585.png" alt="Mtetezi LLP Logo">
+            </a>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="dropdown">
+                    <a href="practice-areas.html" class="nav-link">Practice Areas <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="practice-areas.html">Corporate Law</a>
+                        <a href="practice-areas.html">Litigation</a>
+                        <a href="practice-areas.html">Real Estate</a>
+                        <a href="practice-areas.html">Family Law</a>
+                        <a href="practice-areas.html">Intellectual Property</a>
+                        <a href="practice-areas.html">Employment</a>
+                    </div>
+                </li>
+                <li><a href="team.html" class="nav-link">Our Team</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="tel:0720615606" class="btn btn-primary">Book Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section-padding"
+        style="background: var(--primary-color); color: #fff; padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1>Our Expertise</h1>
+            <p>Comprehensive Legal Solutions Tailored to Your Needs</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="practice-grid">
+
+                <!-- Card 1 -->
+                <div class="practice-card fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80"
+                        alt="Commercial Law" class="practice-img">
+                    <div class="practice-content">
+                        <i class="fas fa-briefcase practice-icon"></i>
+                        <h3>Commercial & Corporate Law</h3>
+                        <p>We provide expert advice on business formation, contracts, mergers, and regulatory
+                            compliance. Helping your business navigate the complex legal landscape.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="practice-card fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&q=80"
+                        alt="Litigation" class="practice-img">
+                    <div class="practice-content">
+                        <i class="fas fa-gavel practice-icon"></i>
+                        <h3>Civil & Criminal Litigation</h3>
+                        <p>Our robust litigation team represents clients in all courts. We fight aggressively for your
+                            rights and fair outcomes in disputes.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="practice-card fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80"
+                        alt="Real Estate" class="practice-img">
+                    <div class="practice-content">
+                        <i class="fas fa-home practice-icon"></i>
+                        <h3>Real Estate & Conveyancing</h3>
+                        <p>From property acquisition to lease agreements, we handle all aspects of property law with
+                            precision and speed.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="practice-card fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1591543620760-466d13d78c3b?auto=format&fit=crop&q=80"
+                        alt="Family Law" class="practice-img">
+                    <div class="practice-content">
+                        <i class="fas fa-users practice-icon"></i>
+                        <h3>Family Law & Succession</h3>
+                        <p>Compassionate legal support for divorce, child custody, and estate planning/succession
+                            matters.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="practice-card fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
+                        alt="Intellectual Property" class="practice-img">
+                    <div class="practice-content">
+                        <i class="fas fa-lightbulb practice-icon"></i>
+                        <h3>Intellectual Property</h3>
+                        <p>Protecting your innovations and brands through trademark, patent, and copyright registration
+                            and enforcement.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="practice-card fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=80"
+                        alt="Labor Law" class="practice-img">
+                    <div class="practice-content">
+                        <i class="fas fa-hard-hat practice-icon"></i>
+                        <h3>Employment & Labor Law</h3>
+                        <p>Advising employers and employees on workplace rights, contracts, and dispute resolution
+                            mechanisms.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: var(--accent-color);">Mtetezi LLP</h3>
+                    <p style="opacity: 0.8;">Your trusted legal partner in Kenya.</p>
+                    <div style="margin-top: 1rem;">
+                        <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Parliament Rd, Nairobi
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="opacity: 0.8; line-height: 2;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="practice-areas.html">Practice Areas</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="current-year"></span> Mtetezi LLP. All Rights Reserved. |
+                Designed by <a href="https://essenceautomations.com/" target="_blank" rel="noopener">Essence
+                    Automations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+

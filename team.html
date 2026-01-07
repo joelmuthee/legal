@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Team at Mtetezi LLP - Experienced Advocates in Nairobi.">
+    <title>Our Team | Mtetezi LLP</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-img-container {
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 2rem;
+        }
+
+        .team-name {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .team-role {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-socials a {
+            color: var(--primary-color);
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .team-socials a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/mtetezi_logo_premium_1767782139585.png" alt="Mtetezi LLP Logo">
+            </a>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="dropdown">
+                    <a href="practice-areas.html" class="nav-link">Practice Areas <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="practice-areas.html">Corporate Law</a>
+                        <a href="practice-areas.html">Litigation</a>
+                        <a href="practice-areas.html">Real Estate</a>
+                        <a href="practice-areas.html">Family Law</a>
+                        <a href="practice-areas.html">Intellectual Property</a>
+                        <a href="practice-areas.html">Employment</a>
+                    </div>
+                </li>
+                <li><a href="team.html" class="nav-link">Our Team</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="tel:0720615606" class="btn btn-primary">Book Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section-padding"
+        style="background: var(--primary-color); color: #fff; padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1>Our Team</h1>
+            <p>Dedicated Advocates Fighting for Your Interests</p>
+        </div>
+    </header>
+
+    <!-- Team Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="team-grid">
+
+                <!-- Member 1 -->
+                <div class="team-card fade-in-section">
+                    <div class="team-img-container">
+                        <img src="images/team_lawyer_female_2_1767780966571.png" alt="Catherine Njeri" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Catherine Njeri</h3>
+                        <p class="team-role">Senior Partner</p>
+                        <p class="team-bio">With over 20 years of experience in corporate law and governance, Catherine
+                            leads our commercial practice with unmatched expertise.</p>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card fade-in-section">
+                    <div class="team-img-container">
+                        <img src="images/team_lawyer_male_1_1767780950620.png" alt="James Mwangi" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">James Mwangi</h3>
+                        <p class="team-role">Managing Partner</p>
+                        <p class="team-bio">A formidable litigator known for his strategic approach in high-stakes civil
+                            and criminal defense cases.</p>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card fade-in-section">
+                    <div class="team-img-container">
+                        <img src="images/team_lawyer_female_1_retry_1767781101446.png" alt="Alice Wambui"
+                            class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Alice Wambui</h3>
+                        <p class="team-role">Senior Associate</p>
+                        <p class="team-bio">Specializing in family law and conveyancing, Alice brings compassion and
+                            efficiency to every client matter.</p>
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: var(--accent-color);">Mtetezi LLP</h3>
+                    <p style="opacity: 0.8;">Your trusted legal partner.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="opacity: 0.8; line-height: 2;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="practice-areas.html">Practice Areas</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="current-year"></span> Mtetezi LLP. All Rights Reserved. |
+                Designed by <a href="https://essenceautomations.com/" target="_blank" rel="noopener">Essence
+                    Automations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
