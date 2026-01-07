@@ -621,6 +621,15 @@ h3 {
     .hero-stats {
         flex-direction: column;
         gap: 2rem;
+        align-items: center;
+    }
+
+    .mission-text-col {
+        text-align: center;
+    }
+
+    .mission-text-col h2 {
+        font-size: 2rem;
     }
 }
 
