@@ -623,10 +623,29 @@ h3 {
         flex-direction: column;
         gap: 2rem;
         align-items: center;
+        width: 100% !important;
+    }
+
+    .stat-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .mission-text-col {
-        text-align: center;
+        text-align: center !important;
+    }
+
+    .mission-text-col h2,
+    .mission-text-col p {
+        text-align: center !important;
+    }
+
+    .mission-tag {
+        margin: 0 auto 1rem !important;
+        justify-content: center;
+        display: inline-flex;
     }
 
     .mission-text-col h2 {
@@ -733,7 +752,10 @@ footer {
 
     .hero {
         background-attachment: scroll;
-        /* Fix for mobile parallax issues */
+        height: auto;
+        min-height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 4rem;
     }
 
     /* Fix mobile overflow */
