@@ -936,8 +936,14 @@ footer {
     }
 
     /* Force grid items to center if they don't fill width */
+    .features-grid,
     .container>div {
-        justify-content: center;
+        justify-content: center !important;
+        justify-items: center !important;
+    }
+
+    .features-grid {
+        justify-content: center !important;
     }
 }
 
