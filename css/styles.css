@@ -856,6 +856,20 @@ footer {
     color: var(--accent-color);
 }
 
+.footer-contact-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    /* Faint underline */
+    padding-bottom: 2px;
+    transition: var(--transition);
+}
+
+.footer-contact-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -1062,6 +1076,18 @@ footer {
     font-size: 3rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
+}
+
+/* Contact Card */
+.contact-card {
+    background: #fff;
+    padding: 3rem;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 1.5rem !important;
+    }
 }
 
 /* FAQ Accordion */
