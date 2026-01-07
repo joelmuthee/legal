@@ -755,10 +755,37 @@ h3 {
 
 /* Animations */
 @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.stagger-2 {
+    animation-delay: 0.3s;
+}
+
+.stagger-3 {
+    animation-delay: 0.5s;
+}
+
+.stagger-4 {
+    animation-delay: 0.7s;
+}
+
+.hero-content>* {
+    opacity: 0;
+    /* Integrate with stagger to ensure hidden initially */
+    animation: fadeUp 0.8s ease-out forwards;
 }
 
 .fade-in-section {
