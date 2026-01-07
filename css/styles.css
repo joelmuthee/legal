@@ -923,6 +923,22 @@ footer {
     .service-icon-grid {
         justify-content: center;
     }
+
+    /* Global Mobile Center Alignment Constraints */
+    .feature-card,
+    .contact-card,
+    .team-member,
+    .practice-area-card {
+        text-align: center !important;
+        align-items: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Force grid items to center if they don't fill width */
+    .container>div {
+        justify-content: center;
+    }
 }
 
 /* Scrolling Reviews */
