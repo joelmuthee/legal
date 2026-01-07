@@ -652,38 +652,81 @@ h3 {
         line-height: 1.2;
     }
 
+    /* Force Mission Grid to Stack and Center */
+    .mission-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mission-grid>div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .mission-text-col {
         text-align: center !important;
+        align-items: center !important;
+        display: flex;
+        flex-direction: column;
     }
 
     .mission-text-col h2,
     .mission-text-col p {
         text-align: center !important;
+        width: 100%;
     }
 
     .mission-tag {
-        margin: 0 auto 1rem !important;
+        margin: 0 auto 1.5rem !important;
         justify-content: center;
         display: inline-flex;
     }
 
-    .mission-text-col h2 {
-        font-size: 2rem;
+    /* Fix Vision/Mission Cards Alignment */
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .info-card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .info-card-icon {
+        margin-bottom: 1rem;
     }
 
     /* Center Core Values Header & Content on Mobile */
     .mission-grid>div>h3 {
         justify-content: center !important;
-        text-align: center;
+        text-align: center !important;
         width: 100%;
+        display: flex;
     }
 
     .values-grid {
         justify-content: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        /* Optimizing grid for mobile */
+        gap: 1rem;
     }
 
     .value-card {
         margin: 0 auto;
+        width: 100%;
     }
 }
 
