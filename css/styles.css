@@ -756,7 +756,7 @@ footer {
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: var(--primary-color);
+        background-color: #ffffff;
         flex-direction: column;
         padding: 2rem;
         transform: translateY(-150%);
