@@ -666,6 +666,21 @@ h3 {
     .mission-text-col h2 {
         font-size: 2rem;
     }
+
+    /* Center Core Values Header & Content on Mobile */
+    .mission-grid>div>h3 {
+        justify-content: center !important;
+        text-align: center;
+        width: 100%;
+    }
+
+    .values-grid {
+        justify-content: center;
+    }
+
+    .value-card {
+        margin: 0 auto;
+    }
 }
 
 /* Animations */
