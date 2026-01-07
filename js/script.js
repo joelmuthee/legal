@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -19,6 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !mobileToggle.contains(e.target) && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+        }
+    });
+
+    // Dynamic Copyright Year
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
     // Scroll Animations (Fade Up)
     const observerOptions = {
         threshold: 0.2,
@@ -29,15 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                
+
                 // Trigger counter if it's a stat item
                 if (entry.target.classList.contains('stat-item') || entry.target.closest('.stat-item')) {
-                     // Ensure counters run only once
-                     const statNumber = entry.target.querySelector('.stat-number') || entry.target;
-                     if(statNumber.classList.contains('stat-number') && !statNumber.dataset.counted) {
+                    // Ensure counters run only once
+                    const statNumber = entry.target.querySelector('.stat-number') || entry.target;
+                    if (statNumber.classList.contains('stat-number') && !statNumber.dataset.counted) {
                         animateValue(statNumber);
                         statNumber.dataset.counted = "true";
-                     }
+                    }
                 }
             }
         });
@@ -63,16 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            
+
             // Easing function (easeOutQuad)
             const easeProgress = 1 - Math.pow(1 - progress, 3);
-            
+
             obj.innerHTML = Math.floor(easeProgress * target) + suffix;
 
             if (progress < 1) {
                 window.requestAnimationFrame(step);
             } else {
-                 obj.innerHTML = target + suffix;
+                obj.innerHTML = target + suffix;
             }
         };
 
