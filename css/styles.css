@@ -821,6 +821,8 @@ h3 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid #f0f0f0;
+    white-space: normal;
+    /* Fix text overflow in marquee */
 }
 
 .stars {
@@ -945,6 +947,15 @@ footer {
     .features-grid {
         justify-content: center !important;
     }
+
+    .feature-icon {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .contact-row {
+        justify-content: center;
+    }
 }
 
 /* Scrolling Reviews */
@@ -990,6 +1001,8 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     height: 100%;
+    text-align: center;
+    /* Center align text */
 }
 
 .feature-card:hover {
@@ -1018,6 +1031,8 @@ footer {
     background: rgba(13, 27, 42, 0.05);
     border-radius: 50%;
     transition: var(--transition);
+    margin: 0 auto 1.5rem;
+    /* Center align the icon container */
 }
 
 /* Service Icons Grid */
