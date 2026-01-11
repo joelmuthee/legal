@@ -1108,8 +1108,15 @@ footer {
 @media (max-width: 768px) {
     .contact-container-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        /* Add gap on mobile */
+        gap: 2rem !important;
+        /* Force gap */
+    }
+
+    .map-container {
+        min-height: 300px !important;
+        /* adjust height for mobile if needed */
+        margin-top: 1rem;
+        /* Extra safety margin */
     }
 }
 
