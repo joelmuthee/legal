@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll Animations (Fade Up)
     // Scroll Animations (Bidirectional)
     const observerOptions = {
-        threshold: 0.15, // Trigger slightly earlier
+        threshold: 0.1, // Trigger slightly earlier
         rootMargin: "0px"
     };
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     entry.target.classList.add('fade-in-down');
                     entry.target.classList.remove('fade-in-up');
                 }
-                
+
                 entry.target.classList.add('is-visible');
 
                 // Trigger counter if it's a stat item
