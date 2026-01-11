@@ -577,9 +577,6 @@ h3 {
 
 .hero-content {
     max-width: 900px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease forwards;
     padding: 2rem;
 }
 
@@ -1099,6 +1096,23 @@ footer {
 }
 
 /* Contact Card */
+.contact-container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .contact-container-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        /* Add gap on mobile */
+    }
+}
+
 .contact-card {
     background: #fff;
     padding: 3rem;
