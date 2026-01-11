@@ -35,14 +35,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll Animations (Fade Up)
+    // Scroll Animations (Bidirectional)
     const observerOptions = {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.15, // Trigger slightly earlier
+        rootMargin: "0px"
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Determine 'scroll direction' relative to element
+                // If element is below viewport (positive top), we are scrolling down to it -> Fade Up
+                // If element is above viewport (negative/zero top), we are scrolling up to it -> Fade Down
+                if (entry.boundingClientRect.top > 0) {
+                    entry.target.classList.add('fade-in-up');
+                    entry.target.classList.remove('fade-in-down');
+                } else {
+                    entry.target.classList.add('fade-in-down');
+                    entry.target.classList.remove('fade-in-up');
+                }
+                
                 entry.target.classList.add('is-visible');
 
                 // Trigger counter if it's a stat item
@@ -54,15 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         statNumber.dataset.counted = "true";
                     }
                 }
+            } else {
+                // Reset animations when out of view (Bidirectional effect)
+                entry.target.classList.remove('fade-in-up', 'fade-in-down', 'is-visible');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.fade-in-section').forEach(section => {
+    // Observer all elements with .scroll-animate or legacy .fade-in-section
+    document.querySelectorAll('.scroll-animate, .fade-in-section').forEach(section => {
         observer.observe(section);
     });
 
-    // Also observe stats specifically if they aren't inside a fade-in-section
+    // Also observe stats specifically if they aren't inside a section
     document.querySelectorAll('.stat-item').forEach(item => {
         observer.observe(item);
     });
