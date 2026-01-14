@@ -573,6 +573,15 @@ h3 {
     position: relative;
     overflow: hidden;
     /* Ensure background doesn't bleed */
+    /* Ensure background doesn't bleed */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .hero-content {
