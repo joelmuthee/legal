@@ -573,8 +573,7 @@ h3 {
     color: var(--text-light);
     text-align: center;
     padding-top: 100px;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+
     position: relative;
     overflow: hidden;
 }
@@ -582,8 +581,7 @@ h3 {
 @media (max-width: 768px) {
     .hero {
         background-attachment: scroll;
-        width: 100%;
-        margin-left: 0;
+
         height: auto;
         min-height: 100dvh;
         padding-bottom: 2rem;
