@@ -568,7 +568,8 @@ h3 {
     color: var(--text-light);
     text-align: center;
     padding-top: 100px;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     position: relative;
     overflow: hidden;
     /* Ensure background doesn't bleed */
