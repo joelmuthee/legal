@@ -799,32 +799,36 @@ h3 {
 
 
 /* Highlight Animation for Practice Areas */
+/* Practice Card Styles */
+/* Note: scroll-margin-top added via practice-areas.html specific styles or here if generic */
+.practice-card {
+    scroll-margin-top: 180px;
+}
+
+/* Highlight Animation for Practice Areas */
 .highlight-card {
-    animation: glow-pulse 2s infinite ease-in-out;
-    border: 2px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(196, 167, 125, 0.6);
+    animation: glow-pulse 1.5s infinite ease-in-out !important;
+    border: 3px solid var(--accent-color) !important;
+    z-index: 10;
     position: relative;
-    z-index: 2;
 }
 
 @keyframes glow-pulse {
     0% {
-        box-shadow: 0 0 15px rgba(196, 167, 125, 0.5);
+        box-shadow: 0 0 0 0 rgba(196, 167, 125, 0.7);
         transform: scale(1);
-        border-color: var(--accent-color);
     }
 
     50% {
-        box-shadow: 0 0 40px rgba(196, 167, 125, 0.9);
-        transform: scale(1.05);
-        border-color: #fff;
-        background-color: rgba(196, 167, 125, 0.05);
+        box-shadow: 0 0 20px 10px rgba(196, 167, 125, 0);
+        transform: scale(1.08);
+        background-color: #fffbf0;
+        border-color: var(--accent-color);
     }
 
     100% {
-        box-shadow: 0 0 15px rgba(196, 167, 125, 0.5);
+        box-shadow: 0 0 0 0 rgba(196, 167, 125, 0);
         transform: scale(1);
-        border-color: var(--accent-color);
     }
 }
 

@@ -127,10 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Add highlight class
                 targetCard.classList.add('highlight-card');
 
-                // Remove class after animation (3 cycles * 2s = 6s, but let's do 4s)
+                // Remove class after animation? No, let's keep it until interaction or for a long time.
+                // Re-clicking or clicking elsewhere handles itself via navigation. 
+                // We'll set a long timeout just in case it gets annoying.
                 setTimeout(() => {
                     targetCard.classList.remove('highlight-card');
-                }, 4000);
+                }, 10000); // 10 seconds should be plenty to see it, then it stops.
             }
         }
     }
