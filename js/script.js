@@ -118,6 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetCard = document.getElementById(hash);
 
             if (targetCard) {
+                // Remove highlight from ALL other cards first
+                document.querySelectorAll('.highlight-card').forEach(card => {
+                    card.classList.remove('highlight-card');
+                });
+
                 // Force visibility immediately to avoid 'opacity: 0' delay
                 targetCard.style.opacity = '1';
                 targetCard.style.transform = 'none';
