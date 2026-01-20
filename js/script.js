@@ -135,6 +135,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+    // Close Mobile Menu when a link is clicked
+    const menuLinks = document.querySelectorAll('.nav-links a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Check if it's a real link (not the dropdown toggle)
+            if (link.getAttribute('href') !== 'javascript:void(0)' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                if (mobileToggle) {
+                    const icon = mobileToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+    });
+
     // Check on load
     checkHashAndHighlight();
 
