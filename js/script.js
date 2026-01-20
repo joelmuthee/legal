@@ -118,6 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetCard = document.getElementById(hash);
 
             if (targetCard) {
+                // Force visibility immediately to avoid 'opacity: 0' delay
+                targetCard.style.opacity = '1';
+                targetCard.style.transform = 'none';
+                targetCard.classList.add('is-visible');
+
                 // Scroll to element
                 targetCard.scrollIntoView({
                     behavior: 'smooth',
