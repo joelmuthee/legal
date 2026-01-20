@@ -809,19 +809,22 @@ h3 {
 
 @keyframes glow-pulse {
     0% {
-        box-shadow: 0 0 10px rgba(196, 167, 125, 0.4);
+        box-shadow: 0 0 15px rgba(196, 167, 125, 0.5);
         transform: scale(1);
+        border-color: var(--accent-color);
     }
 
     50% {
-        box-shadow: 0 0 30px rgba(196, 167, 125, 0.8);
-        transform: scale(1.03);
+        box-shadow: 0 0 40px rgba(196, 167, 125, 0.9);
+        transform: scale(1.05);
+        border-color: #fff;
+        background-color: rgba(196, 167, 125, 0.05);
     }
 
-
     100% {
-        box-shadow: 0 0 10px rgba(196, 167, 125, 0.4);
+        box-shadow: 0 0 15px rgba(196, 167, 125, 0.5);
         transform: scale(1);
+        border-color: var(--accent-color);
     }
 }
 
