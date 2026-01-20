@@ -110,4 +110,35 @@ document.addEventListener('DOMContentLoaded', () => {
         window.requestAnimationFrame(step);
     }
 
+
+    // Highlight Practice Area from Hash
+    function checkHashAndHighlight() {
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1); // Remove '#'
+            const targetCard = document.getElementById(hash);
+
+            if (targetCard) {
+                // Scroll to element
+                targetCard.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+                // Add highlight class
+                targetCard.classList.add('highlight-card');
+
+                // Remove class after animation (3 cycles * 2s = 6s, but let's do 4s)
+                setTimeout(() => {
+                    targetCard.classList.remove('highlight-card');
+                }, 4000);
+            }
+        }
+    }
+
+    // Check on load
+    checkHashAndHighlight();
+
+    // Check on hash change (if user clicks another link while on the page)
+    window.addEventListener('hashchange', checkHashAndHighlight);
+
 });

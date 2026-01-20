@@ -797,6 +797,34 @@ h3 {
     }
 }
 
+
+/* Highlight Animation for Practice Areas */
+.highlight-card {
+    animation: glow-pulse 2s infinite ease-in-out;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(196, 167, 125, 0.6);
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(196, 167, 125, 0.4);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(196, 167, 125, 0.8);
+        transform: scale(1.03);
+    }
+
+
+    100% {
+        box-shadow: 0 0 10px rgba(196, 167, 125, 0.4);
+        transform: scale(1);
+    }
+}
+
 .stagger-1 {
     animation-delay: 0.1s;
 }
